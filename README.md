@@ -50,8 +50,8 @@ python .\manage.py runserver
 py .\manage.py runserver
 ```
 
-when success go to => http://127.0.0.1:8000/
-if you have problem with installation , try to run => python -m pip install --upgrade pip
+when success go to => http://127.0.0.1:8000/ <br/>
+<b>Note : </b> if you have problem with installation , try to run => python -m pip install --upgrade pip
 
 # Documents:
 
