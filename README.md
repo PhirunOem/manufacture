@@ -59,6 +59,7 @@ when success go to => http://127.0.0.1:8000/ <br/>
 
 # Documents:
 
+<b>Official document : </b>https://www.djangoproject.com/start/ <br/>
 -> Generic class in django : https://docs.djangoproject.com/en/5.1/topics/class-based-views/generic-display/ <br/>
 -> User authentication and user permission in django: https://docs.djangoproject.com/en/5.0/topics/auth/default/#user-objects <br/>
 -> Create django enviroment : https://www.freecodecamp.org/news/how-to-set-up-a-django-development-environment/
