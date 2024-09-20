@@ -2,7 +2,7 @@
 
 ## step1: clone project
 
-### using git
+#### - using git
 
 ```base
 git clone https://github.com/PhirunOem/manufacture.git
@@ -12,19 +12,19 @@ And then cd manufacture
 
 ## step2 : set up project enviroment
 
-### using python
+#### - using python
 
 ```base
 python -m venv myenv
 ```
 
-### activate enviroment for macOS and Linux
+#### - activate enviroment for macOS and Linux
 
 ```base
 source myenv/bin/activate
 ```
 
-### for window
+#### - for window
 
 ```base
 myenv\Scripts\activate
@@ -38,13 +38,13 @@ pip install -r ./requirements.txt
 
 ## step4: run project:
 
-### using python
+#### - using python
 
 ```base
 python .\manage.py runserver
 ```
 
-### using py
+#### - using py
 
 ```base
 py .\manage.py runserver
@@ -52,7 +52,7 @@ py .\manage.py runserver
 
 if you have problem with installation , try to run => python -m pip install --upgrade pip
 
-# Documents
+# Documents:
 
 -> Generic class in django : https://docs.djangoproject.com/en/5.1/topics/class-based-views/generic-display/ <br/>
 -> User authentication and user permission in django: https://docs.djangoproject.com/en/5.0/topics/auth/default/#user-objects <br/>
