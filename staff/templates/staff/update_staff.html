@@ -1,0 +1,27 @@
+{% comment %}
+<form action="{% url 'staff:result' %}" method="post">
+  {% csrf_token %}
+  <fieldset>
+    {% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+  </fieldset>
+  {% if error_message %}
+  <p><strong>{{ error_message }}</strong></p>
+  {% endif %}
+  <input type="text" placeholder="name" name="name" autocomplete="off" />
+  <input type="submit" value="Create" />
+  <input type="reset" value="Reset" />
+</form>
+{% endcomment %}
+
+<form method="POST" enctype="multipart/form-data">
+  <!-- Security token -->
+  {% csrf_token %}
+
+  <!-- Using the formset -->
+  {{ form.as_p }}
+  {% comment %} <input type="text">edit</input> {% endcomment %}
+
+  <input type="submit" value="Update" />
+</form>

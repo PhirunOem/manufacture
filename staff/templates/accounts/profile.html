@@ -1,0 +1,40 @@
+{% extends "base.html" %} {%load static %} {% block title %}User Profile
+{%endblock %} {% block content%}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'accounts/profile.css' %}"
+/>
+<div class="container">
+  {% if user.is_authenticated %}
+  <h2>Hi {{ user.username }}! you have id {{user.id}}</h2>
+  <div class="subContainer">
+    <form action="{% url 'staff:logout' %} " method="post">
+      {% csrf_token %}
+      <div class="action">
+        <button type="submit">Log Out</button>
+      </div>
+    </form>
+    <form action="{% url 'staff:change-password' %} " method="post">
+      {% csrf_token %}
+      <div class="action">
+        <button type="submit">Chang Password</button>
+      </div>
+    </form>
+    <form action="{%url 'staff:edit-profile' user.id%} " method="post">
+      {% csrf_token %}
+      <div class="action">
+        <button type="submit">Edit your profile</button>
+      </div>
+    </form>
+    <form action="{%url 'staff:index'%} " method="GET">
+      <div class="action">
+        <button type="submit">View staff</button>
+      </div>
+    </form>
+  </div>
+  {% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'staff:sign-up' %}">Log In</a>
+  {% endif %} {%endblock%}
+</div>

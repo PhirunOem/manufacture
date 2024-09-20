@@ -1,0 +1,49 @@
+{%extends 'base.html'%} {% load static %}{%block title%} List of all staffs
+{%endblock%} {%block content%}
+<link rel="stylesheet" href="{% static 'staff/index.css' %}" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  {% if messages%}
+  {% for meg in messages %}
+  swal({
+    title: "Good job!",
+    text: "{{meg}}",
+    icon: "success",
+    button: "Aww yiss!",
+  });
+  {%endfor%}
+  {%endif%}
+</script>
+{% if staff_list %}
+<div class="container">
+  <h2>List of staffs</h2>
+  <ul>
+    {% for staff in staff_list %}
+    <li>
+      User name is === {{ staff.name }} and gender === {{staff.sex}}
+      <form action="{%url 'staff:delete-staff' staff.id %}">
+        <button class="btn-action" type="submit">Delete</button>
+      </form>
+      <form action="{%url 'staff:update-staff' staff.id%}">
+        <button class="btn-action" id="btn-edit" type="submit">Edit</button>
+      </form>
+      <form action="{{staff.get_absolute_url}}">
+        <button class="btn-action" id="btn-edit" type="submit">
+          View detail
+        </button>
+      </form>
+    </li>
+    {% endfor %}
+    <form action="{%url 'staff:create-staff'%}">
+      <button class="btn-create" type="submit">Create more staff ?</button>
+    </form>
+  </ul>
+</div>
+{% else %}
+<div class="container2">
+  <h2>No staff are available.</h2>
+  <form action="{%url 'staff:create-staff'%}">
+    <button class="btn-create" type="submit">Create staff ?</button>
+  </form>
+</div>
+{%endif%} {%endblock%}

@@ -1,0 +1,22 @@
+{%extends 'base.html'%} {%load static%} {%block title%} Sign Up {%endblock%}
+{%block content%}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'accounts/signIn.css' %}"
+/>
+<div class="row">
+  <h2>Sign in to your account here</h2>
+  <div class="col-md-8 col-sm-10 col-12">
+    <form method="POST" autocomplete>
+      {% csrf_token %} {{ form.as_p }}
+      <div class="action">
+        <button type="submit" class="btn btn-success">Log In</button>
+        <span
+          >Have no account ? <a href="{%url 'staff:sign-up'%}">Sign Up</a></span
+        >
+      </div>
+    </form>
+  </div>
+</div>
+{%endblock%}

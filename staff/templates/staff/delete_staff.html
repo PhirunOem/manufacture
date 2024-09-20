@@ -1,0 +1,10 @@
+<form method="post">
+  {% csrf_token %}
+
+  <p>
+    Are you sure you want to delete with name "{{ staff_deleted.name }}" and id
+    {{staff_deleted.id}} ?
+  </p>
+  <a href='{% url 'staff:index' %}'> Cancel </a>
+  <input type="submit" value="Confirm" />
+</form>

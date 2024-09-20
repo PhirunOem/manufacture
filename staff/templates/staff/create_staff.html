@@ -1,0 +1,17 @@
+{%extends 'base.html'%}{%load static%}{%block title%} Create User {%endblock%}
+{%block content%}
+<link rel="stylesheet" href="{% static 'staff/create.css' %}" />
+<div class="container">
+  <h2>Create New Staff :</h2>
+  <form method="POST" enctype="multipart/form-data">
+    <!-- Security token -->
+    {% csrf_token %}
+    <!-- Using the formset -->
+    {{ form.as_p }}
+    <input class="btn" type="submit" value="Submit" class="input_name" />
+  </form>
+  <form action="{%url 'staff:index'%}">
+    <button>Cancel</button>
+  </form>
+</div>
+{%endblock%}

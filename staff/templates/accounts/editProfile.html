@@ -1,0 +1,22 @@
+{%extends 'base.html'%} {%load static%} {%block title%} Change password
+{%endblock%} {%block content%}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'accounts/changePassword.css' %}"
+/>
+{%if user.is_authenticated%}
+<div class="row">
+  <h3>You are log in as {{user.username}}:</h3>
+  <span>We are recommend to use an existing one.</span>
+  <div class="col-md-8 col-sm-10 col-12">
+    <form method="POST">
+      {% csrf_token %} {{form.username }}
+      <div class="action">
+        <button type="submit" class="btn btn-success">Change</button>
+        <a href="{%url 'staff:profile'%}">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{%endif%} {%endblock%}

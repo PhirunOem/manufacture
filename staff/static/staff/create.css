@@ -1,0 +1,47 @@
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+input[type="submit"],
+select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #0c5a87;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition-duration: 1s;
+}
+input[type="submit"].btn:hover {
+  background-color: #f58ef5;
+  border: none;
+  cursor: pointer;
+}
+div {
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  margin-left: 25%;
+  margin-top: 5%;
+}

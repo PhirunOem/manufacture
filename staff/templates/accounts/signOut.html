@@ -1,0 +1,5 @@
+<p>Are u sure to log out ?</p>
+<form action="{% url 'staff:home' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Yes</button>
+</form>

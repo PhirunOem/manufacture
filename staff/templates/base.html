@@ -1,0 +1,26 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+      .container {
+        text-align: center;
+      }
+      .base {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="base">
+      {%if user.is_authenticated%}
+      <h1>You are loggin as {{user.username}}</h1>
+      {%else%}
+      <h1>You are not log in</h1>
+      {%endif%}
+    </div>
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>
