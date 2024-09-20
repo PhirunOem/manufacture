@@ -1,12 +1,42 @@
 # Getting start
 
-## step1: install requirements
+## step1: clone project
+
+### using git
+
+```base
+git clone https://github.com/PhirunOem/manufacture.git
+```
+
+And then cd manufacture
+
+## step2 : set up project enviroment
+
+### using python
+
+```base
+python -m venv myenv
+```
+
+### activate enviroment for macOS and Linux
+
+```base
+source myenv/bin/activate
+```
+
+### for window
+
+```base
+myenv\Scripts\activate
+```
+
+## step3: install requirements
 
 ```base
 pip install -r ./requirements.txt
 ```
 
-## step2: run project:
+## step4: run project:
 
 ### using python
 
@@ -25,4 +55,5 @@ if you have problem with installation , try to run => python -m pip install --up
 # Documents
 
 -> Generic class in django : https://docs.djangoproject.com/en/5.1/topics/class-based-views/generic-display/ <br/>
--> User authentication and user permission in django: https://docs.djangoproject.com/en/5.0/topics/auth/default/#user-objects
+-> User authentication and user permission in django: https://docs.djangoproject.com/en/5.0/topics/auth/default/#user-objects <br/>
+-> Create django enviroment : https://www.freecodecamp.org/news/how-to-set-up-a-django-development-environment/
