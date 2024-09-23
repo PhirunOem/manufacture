@@ -1,35 +1,25 @@
-from collections.abc import Sequence
-from django import forms
 from django.conf import settings
-from django.core.paginator import Paginator
-from django.forms import ValidationError
-from django.shortcuts import get_object_or_404, render, redirect
-from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
 # Create your views here.
-from django.http import Http404, HttpRequest, HttpResponse,HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse,HttpResponseRedirect
 
 from django.http import HttpResponse
-from django.template import loader
 from django.views import generic
 from .models import staffInfo
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
 from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout
 from .form import RegistrationForm, UserLoginForm, UserChangePasswordForm, UserEditProfileForm
-import logging
-from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.models import User
-from django.contrib.auth.decorators import login_required, permission_required
 
 
 # importing modules
 from django.contrib.auth import get_user_model
 from django.contrib.contenttypes.models import ContentType
-from django.contrib.auth.models import User, Permission,Group
+from django.contrib.auth.models import User, Permission
 
 def add_user_to_group_perm(username):
         content_type = ContentType.objects.get_for_model(staffInfo)     
@@ -246,3 +236,4 @@ class DeleteStaff(PermissionRequiredMixin,generic.DeleteView):
 # #     # else:
 # #     #     raise ValidationError(message="Error update!!")
 #     return render(request, 'staff/update_staff.html', {'form': form}) 
+

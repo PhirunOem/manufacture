@@ -19,5 +19,6 @@ urlpatterns = [
     path('staff/create/', views.CreateStaff.as_view(), name= 'create-staff'),
     # path('staff/<int:pk>/update', views.update_staff, name = 'update-staff'),
     path('staff/<int:pk>/update', views.UpdateStaff.as_view(), name = 'update-staff'),
-    path('staff/<pk>/delete', views.DeleteStaff.as_view(), name = 'delete-staff')
+    path('staff/<pk>/delete', views.DeleteStaff.as_view(), name = 'delete-staff'),
+
 ]

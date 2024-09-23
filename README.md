@@ -51,10 +51,17 @@ py .\manage.py runserver
 ```
 
 when success go to => http://127.0.0.1:8000/ <br/>
+For api navigate to => http://127.0.0.1:8000/api/v1/view <br/><br/>
 <b>Note : </b> if you have problem with installation , try to run =>
 
 ```base
  python -m pip install --upgrade pip
+```
+
+### Adding new app:
+
+```base
+py manage.py startapp APP_NAME
 ```
 
 # Documents:
